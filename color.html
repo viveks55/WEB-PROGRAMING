@@ -1,0 +1,42 @@
+<html>
+<head>
+<style type="text/css">
+	.container{  
+text-align: center; 
+height: 2000px;
+width: 2000px;
+direction: alternate; 
+left: 2000px;
+right: 2000px; 
+}  
+</style>
+<script type="text/javascript">
+
+	
+		function func()
+	{
+		//alert(getRandomColor());
+		document.body.style.backgroundColor = getRandomColor();
+
+	}
+	
+function getRandomColor() {
+    var letters = "0123456789ABCDEF".split('');
+    var color = "#";
+    for (var i = 0; i < 6; i++ ) 
+    {
+        color += letters[Math.floor(Math.random() * 16)];
+    }
+    return color;
+}
+	
+	
+	</script>
+</head>
+<body onload="func()">
+<div class="container">
+    <button onclick="func()">click here</button>	
+</div>
+
+</body>
+</html>
